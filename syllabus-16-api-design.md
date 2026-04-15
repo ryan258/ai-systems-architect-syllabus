@@ -48,10 +48,14 @@ You already know how to call APIs. This syllabus teaches you how to build them â
 - How to handle long-running workflows â€” async endpoints and background tasks
 - Returning a job ID so the client can check back for results
 - Webhooks vs. polling â€” how the client gets notified when the job is done
+- When a chat-like interface needs token streaming instead of waiting for one complete response
+- Streaming Claude output through FastAPI using Server-Sent Events (SSE)
+- When WebSockets are better than SSE for bidirectional chat or live collaboration
+- Handling disconnects, cancellation, partial output, and stream errors safely
 - Error handling that gives the client useful information without exposing internals
 
 **Session starter:**
-> "Help me wrap a multi-step agentic AI workflow in a FastAPI endpoint. The workflow takes more than a few seconds to run. How do I handle async processing? How does the client get the result when it is ready â€” polling or webhook? Show me the implementation."
+> "Help me wrap a multi-step agentic AI workflow in a FastAPI endpoint. The workflow takes more than a few seconds to run. How do I choose between polling, webhooks, SSE streaming, and WebSockets? Show me how to stream Claude tokens through FastAPI for a chat-like interface and how to handle disconnects safely."
 
 ---
 
@@ -87,4 +91,4 @@ You already know how to call APIs. This syllabus teaches you how to build them â
 
 ## Practice Project
 
-Wrap one of your existing Python AI workflows in a FastAPI endpoint. Add API key authentication and rate limiting. Deploy it using what you learned in Syllabus 14. Write a one-page plain-English quickstart guide for a non-technical client.
+Wrap one of your existing Python AI workflows in a FastAPI endpoint. Add API key authentication and rate limiting. Add one streaming endpoint that sends partial model output to the client using SSE or WebSockets. Deploy it using what you learned in Syllabus 14. Write a one-page plain-English quickstart guide for a non-technical client.

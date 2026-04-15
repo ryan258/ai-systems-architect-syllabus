@@ -47,13 +47,17 @@ You already know how to pass context to an AI model. This syllabus teaches you h
 
 **Topics:**
 - What RAG means — fetching relevant content before asking the model to answer
+- The boundary between RAG and fine-tuning: injecting knowledge into the prompt vs. changing model weights and behavior
+- When a client says "train an AI on our data," how to decide whether they actually need RAG, fine-tuning, or both
 - Chunking strategies: fixed size, sentence boundary, semantic chunking
 - Choosing the right embedding model for your use case
 - How retrieval quality directly determines answer quality
 - Common RAG failure modes and how to design around them
+- When fine-tuning is better for tone, format, classification, or repeated instruction-following failures
+- Why fine-tuning is usually the wrong tool for frequently changing factual knowledge
 
 **Session starter:**
-> "Help me design a production-grade RAG architecture. Explain chunking strategies and how to choose between them. What embedding model should I use? What are the most common ways RAG fails in production and how do I design around each one?"
+> "Help me design a production-grade RAG architecture. Explain the boundary between RAG and fine-tuning: when should I inject knowledge through retrieval, and when should I adjust a model's behavior or tone through fine-tuning? Include chunking, embedding choice, retrieval failure modes, and how to answer a client who asks to 'train an AI on our data.'"
 
 ---
 
@@ -80,13 +84,15 @@ You already know how to pass context to an AI model. This syllabus teaches you h
 - How to detect when new documents need to be re-indexed
 - Handling document updates and deletions cleanly
 - Monitoring pipeline health — how do you know it is still working?
+- How changing documents affects RAG differently from fine-tuned models
+- When to re-index, when to re-train, and when to leave the model alone
 - Designing for low-maintenance operation on bad energy days
 
 **Session starter:**
-> "Help me design a data pipeline that maintains itself over time. How do I detect when documents need re-indexing? How do I handle updates and deletions? What does pipeline health monitoring look like? Design this for minimal ongoing maintenance."
+> "Help me design a data pipeline that maintains itself over time. How do I detect when documents need re-indexing? How do I handle updates and deletions? How is this different from maintaining a fine-tuned model? What does pipeline health monitoring look like? Design this for minimal ongoing maintenance."
 
 ---
 
 ## Practice Project
 
-Take a real set of documents — your own project notes, scripts, or guides. Build a pipeline that ingests them, chunks them, and stores them in a vector database. Then query them with a plain-English question and verify the retrieved chunks are relevant.
+Take a real set of documents — your own project notes, scripts, or guides. Build a pipeline that ingests them, chunks them, and stores them in a vector database. Then query them with a plain-English question and verify the retrieved chunks are relevant. Finally, write a short RAG vs. fine-tuning decision memo explaining why this use case should or should not involve fine-tuning.

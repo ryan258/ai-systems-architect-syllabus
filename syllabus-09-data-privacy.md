@@ -35,9 +35,11 @@ This is not a law degree. It is the minimum you need to work safely.
 - What tools are they comfortable with?
 - Have they agreed to let their data be used in AI tools?
 - Who owns the output?
+- Whether SOC 2, HIPAA, the EU AI Act, or another compliance framework may apply
+- Who at the client can answer security questionnaire questions accurately
 
 **Session starter:**
-> "Help me build a data privacy checklist for new clients. These are the questions I ask before I start any work that involves their files or information. Keep it simple — five to eight questions max."
+> "Help me build a data privacy checklist for new clients. These are the questions I ask before I start any work that involves their files or information. Include practical questions that reveal whether SOC 2, HIPAA, the EU AI Act, or a corporate security questionnaire may apply."
 
 ---
 
@@ -50,9 +52,11 @@ This is not a law degree. It is the minimum you need to work safely.
 - Private medical information
 - Children's data
 - Confidential business information without permission
+- Protected health information (PHI) and when HIPAA may apply because the client is a covered entity or business associate
+- Regulated, high-risk, or jurisdiction-specific data that needs professional review before automation
 
 **Session starter:**
-> "Give me a plain-language list of what should never be put into an AI tool when working with client data. Why is each category risky? What do I do if a client sends me something sensitive by mistake?"
+> "Give me a plain-language list of what should never be put into an AI tool when working with client data. Include private medical information, PHI, children's data, confidential business data, and regulated data. Why is each category risky, and what do I do if a client sends me something sensitive by mistake?"
 
 ---
 
@@ -64,9 +68,11 @@ This is not a law degree. It is the minimum you need to work safely.
 - A data handling clause (what you will and won't do with their data)
 - Who owns the AI-generated output
 - What happens if there is a data problem
+- Plain-English notes about security controls, vendor data use, retention, and deletion
+- How to answer corporate IT questions without pretending to be a SOC 2, HIPAA, or EU AI Act auditor
 
 **Session starter:**
-> "Help me write simple data handling language I can include in a client agreement. I am not a lawyer, so make it plain English. What are the three things I must cover to protect myself?"
+> "Help me write simple data handling language I can include in a client agreement. I am not a lawyer, so make it plain English. Include security controls, vendor data use, retention, deletion, and how to answer corporate IT questions without overstating my compliance status."
 
 ---
 
@@ -79,9 +85,10 @@ This is not a law degree. It is the minimum you need to work safely.
 - Document what happened
 - What not to say that could create legal problems
 - When to get professional help
+- When an incident may trigger contractual, HIPAA, SOC 2-related customer commitments, or EU AI Act escalation obligations
 
 **Session starter:**
-> "Walk me through what I should do if I accidentally expose client data or make a data handling mistake. What are the steps? What do I say to the client? When do I need a lawyer?"
+> "Walk me through what I should do if I accidentally expose client data or make a data handling mistake. What are the steps? What do I say to the client? When might HIPAA, SOC 2-related customer commitments, the EU AI Act, or a contract require escalation? When do I need a lawyer or compliance professional?"
 
 ---
 
@@ -119,4 +126,4 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ## Practice Project
 
-Write a one-paragraph data handling policy for your consulting work. Include what you will and won't do with client information. Plain language only.
+Write a one-paragraph data handling policy for your consulting work. Include what you will and won't do with client information. Then draft short, plain-English answers to five likely corporate IT questions about data retention, model-provider data use, access control, incident response, and whether SOC 2, HIPAA, or the EU AI Act applies.

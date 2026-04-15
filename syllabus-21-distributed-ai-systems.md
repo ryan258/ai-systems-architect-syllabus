@@ -83,10 +83,11 @@ Many AI prototypes are one script. Real AI systems often become APIs, queues, wo
 - Step tracking, retries, compensation, and human approval
 - When a workflow engine helps vs. when it is overkill
 - Temporal, Airflow, Dagster, LangGraph, and simple homegrown orchestration
+- How this connects to multi-agent orchestration in Syllabus 25
 - Designing workflows that can resume after interruption
 
 **Session starter:**
-> "Help me understand workflow orchestration for AI systems. When do I need a workflow engine like Temporal, Airflow, Dagster, or LangGraph? How do I design multi-step AI workflows that can retry, pause for approval, and resume?"
+> "Help me understand workflow orchestration for AI systems. When do I need a workflow engine like Temporal, Airflow, Dagster, LangGraph, or a multi-agent framework? How do I design multi-step AI workflows that can retry, pause for approval, and resume?"
 
 ---
 
