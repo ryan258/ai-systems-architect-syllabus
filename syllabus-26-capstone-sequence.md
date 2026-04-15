@@ -44,7 +44,7 @@ Every capstone must produce:
 - Structured request and response models
 - Cost limits and timeout handling
 - Structured logs and request IDs
-- Deployment to a cloud target from Syllabus 14
+- Deployment to a cloud target from Syllabus 13
 
 **Architecture questions:**
 - When should the API return immediately, stream tokens, or create a background job?

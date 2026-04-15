@@ -19,33 +19,108 @@ If a module does not create an artifact, it is only reading.
 
 ---
 
-## Phase 1 - Personal Operating System and Workflow Design
+## Continuing Lesson Development in a New Chat
 
-**Goal:** Build the way you work before scaling what you build.
+When opening a new chat to continue building lessons, use a prompt that gives the assistant the repo, the continuity rules, and the exact target syllabus. The important instruction is to inspect the existing completed lessons first, then continue in the same structure and quality bar.
 
-- [Syllabus 01: AI Workflow Design](syllabus-01-ai-workflow-design.md)
-- [Syllabus 02: Constraint-Driven Design](syllabus-02-constraint-driven-design.md)
-- [Syllabus 03: Creative Production Systems](syllabus-03-creative-production-systems.md)
-- [Syllabus 04: Project Scoping](syllabus-04-project-scoping.md)
-- [Syllabus 05: How to Show Your Work](syllabus-05-show-your-work.md)
-- [Syllabus 06: Positioning](syllabus-06-positioning.md)
-- [Syllabus 07: Finishing Systems](syllabus-07-finishing-systems.md)
+Use this reusable prompt:
 
-**Phase artifact:** One documented AI workflow, one scope document, one case study, and one positioning statement.
+```text
+We're continuing my AI Systems Architect curriculum in:
+
+/Users/ryanjohnson/Projects/ai-systems-architect-syllabus
+
+Please continue the lesson development in the same style and quality bar as the previous completed modules.
+
+Before editing, inspect:
+1. LESSON-STANDARDS.md
+2. lessons/README.md
+3. The target syllabus file
+4. The completed lessons for Syllabi 01-05 so the new lessons stay continuous in tone, structure, artifact quality, and sequencing.
+
+Target for this phase:
+Build out lessons/[TARGET-FOLDER] from [TARGET-SYLLABUS-FILE].
+
+Requirements:
+- Use the existing lesson structure:
+  - Outcome
+  - Why This Matters
+  - Best-Practice Principles
+  - Concepts
+  - Walkthrough
+  - Practice
+  - Review Checklist
+  - Common Failure Modes
+  - Portfolio Evidence
+  - References
+- Every lesson must produce a concrete artifact.
+- Keep the curriculum practical, grounded, and artifact-driven.
+- Preserve the current style: direct, operational, no hype, no vague motivational content.
+- Weave in reliability, security, privacy, cost, observability, evaluation, governance, and maintainability where relevant.
+- Update lessons/README.md so the new lessons appear in the correct sequence.
+- Run consistency checks afterward: file presence, artifact lines, required headings, balanced code fences, ASCII cleanliness, and line counts.
+- If you find a gap in the syllabus, add a final integration/review lesson rather than leaving the module as disconnected units.
+
+Please implement the files directly and summarize what changed.
+```
+
+For the next likely module, use this version:
+
+```text
+We're continuing my AI Systems Architect curriculum in:
+
+/Users/ryanjohnson/Projects/ai-systems-architect-syllabus
+
+Please continue the lesson development in the same style and quality bar as the previous completed modules.
+
+Before editing, inspect:
+1. LESSON-STANDARDS.md
+2. lessons/README.md
+3. syllabus-06-how-ai-works.md
+4. The completed lessons for Syllabi 01-05 so the new lessons stay continuous in tone, structure, artifact quality, and sequencing.
+
+Target:
+Build out lessons/syllabus-06-how-ai-works from syllabus-06-how-ai-works.md.
+
+Requirements:
+- Match the established lesson structure.
+- Every lesson must produce a concrete artifact.
+- Keep it practical, grounded, and artifact-driven.
+- Preserve the current style: direct, operational, no hype.
+- Weave in reliability, security, privacy, cost, observability, evaluation, governance, and maintainability where relevant.
+- Update lessons/README.md in the correct sequence.
+- Run consistency checks afterward.
+- If the syllabus needs a final integration/review lesson to make the module usable, add one.
+
+Please implement the files directly and summarize what changed.
+```
 
 ---
 
-## Phase 2 - Model, Data, Safety, and Implementation Foundations
+## Phase 1 - Personal Operating System and Scoping
 
-**Goal:** Understand how models behave, how client data creates risk, and how to implement reliable AI workflow code.
+**Goal:** Build the way you work, scope, and finish before scaling what you build.
 
-- [Syllabus 08: How AI Models Work](syllabus-08-how-ai-works.md)
-- [Syllabus 09: Data Privacy and Client Safety](syllabus-09-data-privacy.md)
-- [Syllabus 10: Version Control](syllabus-10-version-control.md)
-- [Syllabus 11: Advanced Python for AI Workflow Architecture](syllabus-11-python-basics.md)
-- [Syllabus 12: Business Foundations](syllabus-12-business-foundations.md)
+- [Syllabus 01: AI Workflow Design](syllabus-01-ai-workflow-design.md)
+- [Syllabus 02: Constraint-Driven Design](syllabus-02-constraint-driven-design.md)
+- [Syllabus 03: Project Scoping](syllabus-03-project-scoping.md)
+- [Syllabus 04: Finishing Systems](syllabus-04-finishing-systems.md)
 
-**Phase artifact:** One Python workflow with structured output validation, mocked tests, a privacy checklist, and a client-facing service offer.
+**Phase artifact:** One documented AI workflow, one scope document, and one completed minimum viable deliverable.
+
+---
+
+## Phase 2 - Architecture, Model, Data, and Implementation Foundations
+
+**Goal:** Learn the architecture frame early, then understand how models behave, how client data creates risk, and how to implement reliable AI workflow code.
+
+- [Syllabus 05: AI System Architecture](syllabus-05-ai-system-architecture.md)
+- [Syllabus 06: How AI Models Work](syllabus-06-how-ai-works.md)
+- [Syllabus 07: Data Privacy and Client Safety](syllabus-07-data-privacy.md)
+- [Syllabus 08: Version Control](syllabus-08-version-control.md)
+- [Syllabus 09: Advanced Python for AI Workflow Architecture](syllabus-09-python-basics.md)
+
+**Phase artifact:** One architecture brief, one Python workflow with structured output validation, mocked tests, and a privacy checklist.
 
 ---
 
@@ -53,39 +128,42 @@ If a module does not create an artifact, it is only reading.
 
 **Goal:** Move from local scripts to deployable AI systems.
 
-- [Syllabus 13: Production AI Systems](syllabus-13-production-ai-systems.md)
-- [Syllabus 14: Cloud Infrastructure and Deployment](syllabus-14-cloud-deployment.md)
-- [Syllabus 15: Data Engineering and Pipelines](syllabus-15-data-engineering.md)
-- [Syllabus 16: API Design with FastAPI](syllabus-16-api-design.md)
+- [Syllabus 10: API Design with FastAPI](syllabus-10-api-design.md)
+- [Syllabus 11: Data Engineering and Pipelines](syllabus-11-data-engineering.md)
+- [Syllabus 12: Production AI Systems](syllabus-12-production-ai-systems.md)
+- [Syllabus 13: Cloud Infrastructure and Deployment](syllabus-13-cloud-deployment.md)
 
 **Phase artifact:** One deployed AI API with auth, rate limits, streaming, cost limits, logging, a runbook, and either a RAG pipeline or a documented RAG vs. fine-tuning decision.
 
 ---
 
-## Phase 4 - Architecture, Reliability, Security, and Delivery
+## Phase 4 - Operations, Delivery, Security, Evals, and Governance
 
-**Goal:** Learn the disciplines that make systems safe to depend on.
+**Goal:** Learn the disciplines that make systems safe to depend on after they leave your laptop.
 
-- [Syllabus 17: AI System Architecture](syllabus-17-ai-system-architecture.md)
-- [Syllabus 18: Reliability and Observability](syllabus-18-reliability-and-observability.md)
-- [Syllabus 19: AI Security Architecture](syllabus-19-ai-security-architecture.md)
-- [Syllabus 20: Infrastructure as Code and CI/CD](syllabus-20-infrastructure-as-code-and-cicd.md)
-- [Syllabus 21: Distributed AI Systems](syllabus-21-distributed-ai-systems.md)
+- [Syllabus 14: Reliability and Observability](syllabus-14-reliability-and-observability.md)
+- [Syllabus 15: Infrastructure as Code and CI/CD](syllabus-15-infrastructure-as-code-and-cicd.md)
+- [Syllabus 16: Distributed AI Systems](syllabus-16-distributed-ai-systems.md)
+- [Syllabus 17: AI Security Architecture](syllabus-17-ai-security-architecture.md)
+- [Syllabus 18: Advanced Evaluation and Release Gates](syllabus-18-advanced-evaluation-and-release-gates.md)
+- [Syllabus 19: AI Governance and Risk](syllabus-19-ai-governance-and-risk.md)
 
-**Phase artifact:** One architecture package with C4 diagrams, a sequence diagram, data-flow diagram, ADRs, threat model, SLOs, CI workflow, deployment plan, rollback plan, and incident runbook.
+**Phase artifact:** One production-readiness package with SLOs, traces/logs/metrics, CI workflow, deployment plan, rollback plan, threat model, eval suite, release gate, risk register, and incident runbook.
 
 ---
 
-## Phase 5 - Enterprise AI Architecture
+## Phase 5 - Enterprise, Multi-Agent, Business, and Portfolio Layer
 
-**Goal:** Design AI systems that fit enterprise constraints: governance, evaluation, adoption, integrations, and multi-agent orchestration.
+**Goal:** Design AI systems that fit organizations, then package the work so clients can understand and buy it.
 
-- [Syllabus 22: AI Governance and Risk](syllabus-22-ai-governance-and-risk.md)
-- [Syllabus 23: Advanced Evaluation and Release Gates](syllabus-23-advanced-evaluation-and-release-gates.md)
-- [Syllabus 24: Enterprise Integration and Change Management](syllabus-24-enterprise-integration-and-change-management.md)
-- [Syllabus 25: Multi-Agent Systems and Orchestration](syllabus-25-multi-agent-systems-and-orchestration.md)
+- [Syllabus 20: Enterprise Integration and Change Management](syllabus-20-enterprise-integration-and-change-management.md)
+- [Syllabus 21: Multi-Agent Systems and Orchestration](syllabus-21-multi-agent-systems-and-orchestration.md)
+- [Syllabus 22: Creative Production Systems](syllabus-22-creative-production-systems.md)
+- [Syllabus 23: How to Show Your Work](syllabus-23-show-your-work.md)
+- [Syllabus 24: Positioning](syllabus-24-positioning.md)
+- [Syllabus 25: Business Foundations](syllabus-25-business-foundations.md)
 
-**Phase artifact:** One enterprise-ready AI system design with a risk register, model card, data card, eval set, release gate, rollout plan, training materials, and handoff checklist.
+**Phase artifact:** One enterprise-ready AI system design with a rollout plan, training materials, handoff checklist, multi-agent architecture option, case study, positioning statement, and service offer.
 
 ---
 
