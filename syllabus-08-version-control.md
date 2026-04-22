@@ -1,16 +1,16 @@
-# Syllabus 08: Version Control — Organizing an Advanced Repo Library
-**Status:** Hidden Gap — Organization, Not Basics
+# Syllabus 08: Version Control - Organizing an Advanced Repo Library
+**Status:** Hidden Gap - Organization, Not Basics
 **Format:** One chat session per unit, self-paced
 
 ---
 
 ## What This Is
 
-You already use Git fluently and have 326 public repos. You also use GitNexus for codebase mapping. This is not a beginner course. The gap here is not skill — it is organization, discoverability, and making your existing work legible to clients and collaborators.
+You already use Git fluently and have 326 public repos. You also use GitNexus for codebase mapping. This is not a beginner course. The gap here is not skill - it is organization, discoverability, and making your existing work legible to clients and collaborators.
 
 ---
 
-## Unit 1 — Auditing 326 Repos Without Losing Your Mind
+## Unit 1 - Auditing 326 Repos Without Losing Your Mind
 
 **Goal:** Build a fast system for deciding what to keep, archive, or delete.
 
@@ -24,7 +24,7 @@ You already use Git fluently and have 326 public repos. You also use GitNexus fo
 
 ---
 
-## Unit 2 — Pinning and Profiling for Client Discovery
+## Unit 2 - Pinning and Profiling for Client Discovery
 
 **Goal:** Make your GitHub profile immediately legible to a potential client who lands on it.
 
@@ -38,7 +38,7 @@ You already use Git fluently and have 326 public repos. You also use GitNexus fo
 
 ---
 
-## Unit 3 — README Standards for Your Most Important Repos
+## Unit 3 - README Standards for Your Most Important Repos
 
 **Goal:** Define a consistent README format across your key projects.
 
@@ -52,7 +52,7 @@ You already use Git fluently and have 326 public repos. You also use GitNexus fo
 
 ---
 
-## Unit 4 — Using GitNexus Effectively for Codebase Navigation
+## Unit 4 - Using GitNexus Effectively for Codebase Navigation
 
 **Goal:** Get more out of the codebase mapping tool you already have.
 
@@ -66,7 +66,7 @@ You already use Git fluently and have 326 public repos. You also use GitNexus fo
 
 ---
 
-## Unit 5 — Making Your Work Findable and Citable
+## Unit 5 - Making Your Work Findable and Citable
 
 **Goal:** Ensure your best projects show up when someone searches for your work.
 
@@ -80,6 +80,29 @@ You already use Git fluently and have 326 public repos. You also use GitNexus fo
 
 ---
 
+## Unit 6 - Repository Library Review Package
+
+**Goal:** Turn your audit, profile, README, codebase-map, and discoverability decisions into one reviewer-ready package that drives the next cleanup wave.
+
+**Topics:**
+- Combining the triage ledger, pinning strategy, README standard, codebase handoff pattern, and citation plan into one package
+- Checking that profile claims, repo states, and metadata standards do not contradict each other
+- Turning the library review into small action waves instead of indefinite cleanup
+- Writing a final keep, refresh, archive, or delete-after-backup recommendation
+- Defining the triggers that force a re-review later
+
+**Session starter:**
+> "Help me assemble a repository library review package for my GitHub account. I want the audit decisions, pinning strategy, README standard, GitNexus handoff pattern, discoverability plan, and a concrete next cleanup wave in one coherent packet."
+
+---
+
 ## Practice Project
 
-Audit your top 20 most-viewed or most-starred repos. Apply the README standard from Unit 3 to the top five. Add topic tags to all 20.
+Create a repository library review package for your account that includes:
+
+- a repository audit rubric and first-wave triage ledger
+- a six-item profile pin set and profile README outline
+- a README standard and metadata checklist
+- a codebase map handoff document for one important repo
+- a discoverability and citation plan for at least 20 repos
+- a concrete next cleanup wave with archive, refresh, and delete-after-backup decisions

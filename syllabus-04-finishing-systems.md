@@ -81,6 +81,27 @@ A minimum viable deliverable (MVD) is the smallest version of something that sti
 
 ---
 
+## Unit 6 — Delivery, Acceptance, and Closure
+
+**Goal:** Close a finished project in a way that makes delivery, acceptance, limitations, and next steps explicit.
+
+**Topics:**
+- Delivering with a summary instead of dropping files over the wall
+- Acceptance checklists and explicit sign-off
+- Known limitations, handoff notes, and ownership
+- Separating future work from the current project closure
+
+**Session starter:**
+> "Help me close a finished project properly. I want a delivery packet, acceptance checklist, limitations list, handoff notes, and a clear way to separate future work from the project that is now done."
+
+---
+
 ## Practice Project
 
-Pick one unfinished project. Write a one-sentence done condition. Set a two-hour time limit. Finish it.
+Pick one project you can actually finish. Then produce:
+
+- a one-sentence done condition
+- a minimum viable deliverable
+- a delivery note
+- an acceptance checklist
+- a short closure packet with limitations and next-step boundaries

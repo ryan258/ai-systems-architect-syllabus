@@ -1,5 +1,5 @@
 # Syllabus 07: Data Privacy and Client Safety
-**Status:** Hidden Gap — Protects You and Your Clients
+**Status:** Hidden Gap - Protects You and Your Clients
 **Format:** One chat session per unit, self-paced
 
 ---
@@ -12,7 +12,7 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ---
 
-## Unit 1 — What Data Privacy Actually Means
+## Unit 1 - What Data Privacy Actually Means
 
 **Goal:** Understand what client data is and why handling it wrong creates real risk.
 
@@ -26,7 +26,7 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ---
 
-## Unit 2 — What to Ask Before Touching Client Data
+## Unit 2 - What to Ask Before Touching Client Data
 
 **Goal:** Build a short checklist of questions you ask every client before starting.
 
@@ -43,7 +43,7 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ---
 
-## Unit 3 — What NOT to Put Into AI Tools
+## Unit 3 - What NOT to Put Into AI Tools
 
 **Goal:** Know what types of information should never go into Claude, ChatGPT, or other AI tools.
 
@@ -60,7 +60,7 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ---
 
-## Unit 4 — Simple Protective Language for Contracts
+## Unit 4 - Simple Protective Language for Contracts
 
 **Goal:** Know what to include in a client agreement to protect yourself.
 
@@ -76,12 +76,12 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ---
 
-## Unit 5 — What to Do If Something Goes Wrong
+## Unit 5 - What to Do If Something Goes Wrong
 
 **Goal:** Know your basic steps if a data mistake happens.
 
 **Topics:**
-- Tell the client immediately — do not wait
+- Tell the client immediately - do not wait
 - Document what happened
 - What not to say that could create legal problems
 - When to get professional help
@@ -92,12 +92,12 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ---
 
-## Unit 6 — Prompt Injection and Active AI Security
+## Unit 6 - Prompt Injection and Active AI Security
 
 **Goal:** Build AI systems that treat every user input as a potential attack.
 
 **Topics:**
-- What prompt injection means — when hidden instructions inside user input hijack the AI
+- What prompt injection means - when hidden instructions inside user input hijack the AI
 - How to separate system instructions from user input safely
 - Input filtering before content reaches the model
 - Output filtering to catch cases where manipulation succeeded
@@ -108,22 +108,47 @@ This is not a law degree. It is the minimum you need to work safely.
 
 ---
 
-## Unit 7 — Human Handoff Design
+## Unit 7 - Human Handoff Design
 
 **Goal:** Build AI workflows that pause and ask for human approval before taking major actions.
 
 **Topics:**
 - Identifying decision points where the AI must never proceed alone
 - Building a pause-and-approve mechanism
-- Designing the review interface for low-energy days — minimal reading, clear choices
+- Designing the review interface for low-energy days - minimal reading, clear choices
 - Requiring approval before any irreversible action
 - Logging handoff reasons to improve the system over time
 
 **Session starter:**
-> "Help me design a human handoff system for an AI workflow. The AI should pause before major or irreversible actions and request my approval. The review must work on my worst brain fog days — clear, minimal, and fast. Show me the design pattern."
+> "Help me design a human handoff system for an AI workflow. The AI should pause before major or irreversible actions and request my approval. The review must work on my worst brain fog days - clear, minimal, and fast. Show me the design pattern."
+
+---
+
+## Unit 8 - Client Data Safety Review Package
+
+**Goal:** Turn the module's privacy, security, contract, incident, and handoff artifacts into one reviewer-ready packet before client data moves.
+
+**Topics:**
+- Combining the data map, intake checklist, exclusion matrix, clause pack, incident plan, prompt injection controls, and handoff policy into one package
+- Checking that approved paths, exclusions, and reviewer roles do not contradict each other
+- Surfacing blockers, missing approvals, and scope limits as real decision inputs
+- Writing a final proceed, narrow, wait, or stop recommendation
+- Defining the change triggers that force a re-review later
+
+**Session starter:**
+> "Help me assemble a client data safety review package for one AI workflow. I want the data map, intake blockers, exclusion rules, contract language, incident plan, prompt injection defenses, human handoff design, and final recommendation in one coherent packet."
 
 ---
 
 ## Practice Project
 
-Write a one-paragraph data handling policy for your consulting work. Include what you will and won't do with client information. Then draft short, plain-English answers to five likely corporate IT questions about data retention, model-provider data use, access control, incident response, and whether SOC 2, HIPAA, or the EU AI Act applies.
+Choose one workflow you have built, designed, or want to build next. Create a client data safety review package that includes:
+
+- a client data classification and handling map
+- a pre-engagement intake checklist and decision log
+- an AI tool exclusion and escalation matrix
+- plain-English data handling and questionnaire language
+- a data incident response packet
+- a prompt injection defense specification
+- a human handoff policy
+- a final proceed, narrow, wait, or stop decision

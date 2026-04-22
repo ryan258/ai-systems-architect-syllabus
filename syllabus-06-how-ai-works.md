@@ -1,31 +1,31 @@
-# Syllabus 06: How AI Models Work — Advanced Practitioner Level
-**Status:** Hidden Gap — Deepen What You Already Know
+# Syllabus 06: How AI Models Work
+**Status:** Hidden Gap - Deepen What You Already Know
 **Format:** One chat session per unit, self-paced
 
 ---
 
 ## What This Is
 
-You already build complex AI workflows, test local models, and run hybrid architectures. This syllabus covers the deeper mechanics — the things that help you debug hard failures, optimize performance, and make better architectural decisions.
+You already build complex AI workflows, test local models, and run hybrid architectures. This syllabus covers the deeper mechanics - the things that help you debug hard failures, optimize performance, and make better architectural decisions.
 
 ---
 
-## Unit 1 — Why Models Fail in Unexpected Ways
+## Unit 1 - Why Models Fail in Unexpected Ways
 
 **Goal:** Understand the deeper reasons behind model failure beyond bad prompts.
 
 **Topics:**
-- Hallucination mechanics — why models confabulate confidently
+- Hallucination mechanics - why models confabulate confidently
 - How training data distribution affects reliability on edge cases
 - The difference between capability failure and alignment failure
 - When retrieval-augmented generation (RAG) helps vs. when it does not
 
 **Session starter:**
-> "Go deep on why large language models fail in unexpected ways. Not surface-level prompt issues — I want to understand hallucination mechanics, distribution gaps, and when RAG actually solves the problem vs. when it does not."
+> "Go deep on why large language models fail in unexpected ways. Not surface-level prompt issues - I want to understand hallucination mechanics, distribution gaps, and when RAG actually solves the problem vs. when it does not."
 
 ---
 
-## Unit 2 — Context Window Architecture Decisions
+## Unit 2 - Context Window Architecture Decisions
 
 **Goal:** Make smart decisions about how to structure context in complex workflows.
 
@@ -40,12 +40,12 @@ You already build complex AI workflows, test local models, and run hybrid archit
 
 ---
 
-## Unit 3 — Temperature, Sampling, and Output Control
+## Unit 3 - Temperature, Sampling, and Output Control
 
 **Goal:** Go beyond basic temperature settings to fully control model output behavior.
 
 **Topics:**
-- Temperature vs. top-p vs. top-k — what each actually controls
+- Temperature vs. top-p vs. top-k - what each actually controls
 - How to use low temperature for structured output and high for ideation
 - Structured output formats (JSON mode, XML constraints)
 - Repetition penalties and frequency penalties
@@ -55,7 +55,7 @@ You already build complex AI workflows, test local models, and run hybrid archit
 
 ---
 
-## Unit 4 — Local vs. Cloud Model Trade-offs
+## Unit 4 - Local vs. Cloud Model Trade-offs
 
 **Goal:** Make informed architectural decisions about when to use Ollama locally vs. Claude via API.
 
@@ -70,7 +70,7 @@ You already build complex AI workflows, test local models, and run hybrid archit
 
 ---
 
-## Unit 5 — Evaluation — How to Know If Your Workflow Actually Works
+## Unit 5 - Evaluation - How to Know If Your Workflow Actually Works
 
 **Goal:** Build lightweight evaluation methods for your AI workflows.
 
@@ -81,16 +81,16 @@ You already build complex AI workflows, test local models, and run hybrid archit
 - Building a feedback loop into deployed workflows
 
 **Session starter:**
-> "Teach me practical evaluation methods for AI workflows. I do not need academic rigor — I need to know when my workflow is actually working vs. when it is quietly failing. What is a lightweight eval approach I can build into my process?"
+> "Teach me practical evaluation methods for AI workflows. I do not need academic rigor - I need to know when my workflow is actually working vs. when it is quietly failing. What is a lightweight eval approach I can build into my process?"
 
 ---
 
-## Unit 6 — Multi-Model Routing and Small Language Models
+## Unit 6 - Multi-Model Routing and Small Language Models
 
-**Goal:** Design systems that send each task to the right model — not everything to the most expensive one.
+**Goal:** Design systems that send each task to the right model - not everything to the most expensive one.
 
 **Topics:**
-- What Small Language Models (SLMs) are — fast, cheap models like Llama 3 8B that run locally via Ollama
+- What Small Language Models (SLMs) are - fast, cheap models like Llama 3 8B that run locally via Ollama
 - The "right model, right task" framework: simple tasks to small models, complex reasoning to frontier models
 - Building a classifier that reads an incoming prompt and routes it to the correct model
 - Cost and latency trade-offs across a multi-model architecture
@@ -101,14 +101,14 @@ You already build complex AI workflows, test local models, and run hybrid archit
 
 ---
 
-## Unit 7 — Live Monitoring After Deployment
+## Unit 7 - Live Monitoring After Deployment
 
-**Goal:** Know when a deployed workflow is failing quietly — before a client notices.
+**Goal:** Know when a deployed workflow is failing quietly - before a client notices.
 
 **Topics:**
 - The difference between testing before launch and observing after launch
 - Tracking response latency as a quality signal
-- Detecting output drift — when answers get quietly worse over time
+- Detecting output drift - when answers get quietly worse over time
 - Structured logging that lets you reconstruct any failure
 
 **Session starter:**
@@ -116,6 +116,31 @@ You already build complex AI workflows, test local models, and run hybrid archit
 
 ---
 
+## Unit 8 - Model Operations Review Package
+
+**Goal:** Turn your model-specific decisions into one reviewable operating package before wider rollout.
+
+**Topics:**
+- Converting failure analysis, context design, output control, routing, evals, and monitoring into one reviewer-ready packet
+- Making model placement, fallback rules, and human handoffs explicit
+- Connecting high-risk failure modes to release gates and production alerts
+- Writing a rollout decision that can be defended to a client, reviewer, or future maintainer
+- Defining the change triggers that force a re-review later
+
+**Session starter:**
+> "Help me assemble a model operations review package for one AI workflow. I want the failure map, context strategy, output control rules, model placement decisions, eval gates, routing policy, monitoring plan, and a final rollout recommendation in one coherent packet."
+
+---
+
 ## Practice Project
 
-Pick one workflow you have built. Define three things that would tell you it is working correctly. Write a simple test for each one.
+Pick one workflow you have built or want to build next. Create a model operations review package that includes:
+
+- a failure analysis register
+- a context strategy
+- an output control policy
+- a model placement decision
+- a lightweight eval set with release gates
+- a routing policy if more than one model path exists
+- a monitoring plan with alerts and a runbook
+- a final rollout decision

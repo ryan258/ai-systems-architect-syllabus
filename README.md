@@ -36,7 +36,7 @@ Before editing, inspect:
 1. LESSON-STANDARDS.md
 2. lessons/README.md
 3. The target syllabus file
-4. The completed lessons for Syllabi 01-05 so the new lessons stay continuous in tone, structure, artifact quality, and sequencing.
+4. The completed lessons for the syllabi already built in the repo so the new lessons stay continuous in tone, structure, artifact quality, and sequencing.
 
 Target for this phase:
 Build out lessons/[TARGET-FOLDER] from [TARGET-SYLLABUS-FILE].
@@ -60,37 +60,6 @@ Requirements:
 - Update lessons/README.md so the new lessons appear in the correct sequence.
 - Run consistency checks afterward: file presence, artifact lines, required headings, balanced code fences, ASCII cleanliness, and line counts.
 - If you find a gap in the syllabus, add a final integration/review lesson rather than leaving the module as disconnected units.
-
-Please implement the files directly and summarize what changed.
-```
-
-For the next likely module, use this version:
-
-```text
-We're continuing my AI Systems Architect curriculum in:
-
-/Users/ryanjohnson/Projects/ai-systems-architect-syllabus
-
-Please continue the lesson development in the same style and quality bar as the previous completed modules.
-
-Before editing, inspect:
-1. LESSON-STANDARDS.md
-2. lessons/README.md
-3. syllabus-06-how-ai-works.md
-4. The completed lessons for Syllabi 01-05 so the new lessons stay continuous in tone, structure, artifact quality, and sequencing.
-
-Target:
-Build out lessons/syllabus-06-how-ai-works from syllabus-06-how-ai-works.md.
-
-Requirements:
-- Match the established lesson structure.
-- Every lesson must produce a concrete artifact.
-- Keep it practical, grounded, and artifact-driven.
-- Preserve the current style: direct, operational, no hype.
-- Weave in reliability, security, privacy, cost, observability, evaluation, governance, and maintainability where relevant.
-- Update lessons/README.md in the correct sequence.
-- Run consistency checks afterward.
-- If the syllabus needs a final integration/review lesson to make the module usable, add one.
 
 Please implement the files directly and summarize what changed.
 ```
@@ -126,20 +95,20 @@ Please implement the files directly and summarize what changed.
 
 ## Phase 3 - Production Builder Core
 
-**Goal:** Move from local scripts to deployable AI systems.
+**Goal:** Move from local scripts to one controlled, deployable AI service.
 
 - [Syllabus 10: API Design with FastAPI](syllabus-10-api-design.md)
 - [Syllabus 11: Data Engineering and Pipelines](syllabus-11-data-engineering.md)
 - [Syllabus 12: Production AI Systems](syllabus-12-production-ai-systems.md)
-- [Syllabus 13: Cloud Infrastructure and Deployment](syllabus-13-cloud-deployment.md)
+- [Syllabus 13: Cloud Deployment](syllabus-13-cloud-deployment.md)
 
-**Phase artifact:** One deployed AI API with auth, rate limits, streaming, cost limits, logging, a runbook, and either a RAG pipeline or a documented RAG vs. fine-tuning decision.
+**Phase artifact:** One AI API or retrieval workflow with production controls, a cloud deployment boundary, a runbook, and either a RAG pipeline or a documented RAG vs. fine-tuning decision.
 
 ---
 
 ## Phase 4 - Operations, Delivery, Security, Evals, and Governance
 
-**Goal:** Learn the disciplines that make systems safe to depend on after they leave your laptop.
+**Goal:** Turn that deployed service into something dependable, repeatable, and safe to scale.
 
 - [Syllabus 14: Reliability and Observability](syllabus-14-reliability-and-observability.md)
 - [Syllabus 15: Infrastructure as Code and CI/CD](syllabus-15-infrastructure-as-code-and-cicd.md)
@@ -148,7 +117,7 @@ Please implement the files directly and summarize what changed.
 - [Syllabus 18: Advanced Evaluation and Release Gates](syllabus-18-advanced-evaluation-and-release-gates.md)
 - [Syllabus 19: AI Governance and Risk](syllabus-19-ai-governance-and-risk.md)
 
-**Phase artifact:** One production-readiness package with SLOs, traces/logs/metrics, CI workflow, deployment plan, rollback plan, threat model, eval suite, release gate, risk register, and incident runbook.
+**Phase artifact:** One production-readiness package with SLOs, traces/logs/metrics, CI workflow, deployment gates, rollback rules, distributed-runtime controls, threat model, eval suite, release gate, risk register, and incident runbook.
 
 ---
 

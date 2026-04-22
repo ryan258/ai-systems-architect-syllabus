@@ -90,6 +90,30 @@ You already know how to build AI workflows. This syllabus teaches you how to des
 
 ---
 
+## Unit 6 - Architecture Package Review
+
+**Goal:** Turn the architecture artifacts into one reviewer-ready package that supports a real build decision.
+
+**Topics:**
+- Combining the brief, diagrams, ADRs, and budgets into one coherent packet
+- Checking that artifacts do not contradict each other
+- Writing open questions, blockers, and required follow-up work
+- Ending with a clear recommendation: build, simplify, prototype, defer, or reject
+
+**Session starter:**
+> "Help me assemble an architecture package review for one AI system. I want the brief, diagrams, ADRs, budgets, blockers, and a final build recommendation in one packet that another person could actually review."
+
+---
+
 ## Practice Project
 
-Pick one AI workflow you have already built. Create a one-page architecture brief with a C4 context diagram, a sequence diagram, a data-flow diagram, three ADRs, a latency budget, a cost budget, and a trade-off table comparing two possible designs.
+Pick one AI workflow you have already built. Create an architecture package that includes:
+
+- a one-page architecture brief
+- a C4 context diagram
+- a sequence diagram
+- a data-flow diagram
+- three ADRs
+- a latency and cost budget
+- a trade-off table comparing two possible designs
+- a final build recommendation with blockers and follow-up work

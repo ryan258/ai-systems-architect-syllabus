@@ -1,12 +1,14 @@
 # Syllabus 15: Infrastructure as Code and CI/CD
-**Status:** Enterprise Gap - Repeatable Deployment Without Dashboard Clicking
+**Status:** Production Spine - Repeatable Delivery and Change Control
 **Format:** One chat session per unit, self-paced
 
 ---
 
 ## What This Is
 
-Cloud deployment is the start. Repeatable deployment is the professional version. This syllabus teaches you how to define infrastructure in files, test changes before shipping them, deploy through a pipeline, and roll back when a release goes wrong.
+Once a service is deployed and instrumented, the next question is whether changes can move safely and repeatably from laptop to production. This syllabus is the delivery-control layer in the course path.
+
+It turns deployment from a sequence of remembered steps into reviewed files, enforced checks, rollout gates, and recovery rules. It assumes one deployable service and prepares the ground for the distributed runtime patterns in Syllabus 16.
 
 ---
 
@@ -90,6 +92,28 @@ Cloud deployment is the start. Repeatable deployment is the professional version
 
 ---
 
+## Unit 6 - Infrastructure as Code and CI/CD Review Package
+
+**Goal:** Combine the delivery artifacts into one reviewer-ready package.
+
+**Topics:**
+- Assembling environment design, Terraform posture, CI checks, deployment gates, rollback rules, and config controls into one packet
+- Checking that promotion rules, infrastructure files, and release expectations do not contradict each other
+- Writing delivery blockers and a final readiness decision
+- Naming the changes that should force a re-review of the delivery path
+
+**Session starter:**
+> "Help me assemble an infrastructure as code and CI/CD review package for one AI workflow. I want the environment plan, Terraform sketch, CI policy, delivery and rollback rules, config controls, and a final release recommendation in one coherent packet."
+
+---
+
 ## Practice Project
 
-Take one FastAPI or Python AI workflow. Add a GitHub Actions CI workflow with mocked model-call tests. Write a Terraform sketch for its deployment resources. Create a release checklist with staging verification, production approval, and rollback steps.
+Take one deployed workflow that already has reliability signals from Syllabus 14 and turn it into a repeatable delivery package that includes:
+
+- an environment matrix and promotion-flow policy
+- a Terraform stack sketch and state policy
+- a CI workflow contract with mocked model-call tests
+- a deployment-gates and rollback brief
+- a config, secrets, and drift-control plan
+- a final delivery recommendation with blockers and next steps

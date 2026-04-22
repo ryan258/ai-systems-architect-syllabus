@@ -1,16 +1,16 @@
 # Syllabus 09: Advanced Python for AI Workflow Architecture
-**Status:** Hidden Gap — Not Basics, But Workflow-Specific Patterns
+**Status:** Hidden Gap - Not Basics, But Workflow-Specific Patterns
 **Format:** One chat session per unit, self-paced
 
 ---
 
 ## What This Is
 
-You are a full-stack developer with deep Python expertise. This is not a beginner course. The gap here is specific patterns that come up repeatedly in AI workflow architecture — agentic loops, async handling, structured output parsing, and building internal tools that survive low-energy days.
+You are a full-stack developer with deep Python expertise. This is not a beginner course. The gap here is specific patterns that come up repeatedly in AI workflow architecture - agentic loops, async handling, structured output parsing, and building internal tools that survive low-energy days.
 
 ---
 
-## Unit 1 — Building Reliable Agentic Loops
+## Unit 1 - Building Reliable Agentic Loops
 
 **Goal:** Write Python loops that handle AI agent workflows without silent failures.
 
@@ -25,7 +25,7 @@ You are a full-stack developer with deep Python expertise. This is not a beginne
 
 ---
 
-## Unit 2 — Async Python for Parallel AI Calls
+## Unit 2 - Async Python for Parallel AI Calls
 
 **Goal:** Run multiple AI calls concurrently without blocking.
 
@@ -40,7 +40,7 @@ You are a full-stack developer with deep Python expertise. This is not a beginne
 
 ---
 
-## Unit 3 — Parsing and Validating Structured AI Output
+## Unit 3 - Parsing and Validating Structured AI Output
 
 **Goal:** Reliably extract structured data from AI responses without brittle string parsing.
 
@@ -55,22 +55,22 @@ You are a full-stack developer with deep Python expertise. This is not a beginne
 
 ---
 
-## Unit 4 — Building Internal CLI Tools for Your Own Workflows
+## Unit 4 - Building Internal CLI Tools for Your Own Workflows
 
 **Goal:** Wrap your AI workflows in simple command-line tools you can invoke quickly.
 
 **Topics:**
-- Click or Typer for building CLI interfaces
+- `argparse`, Click, or Typer for building CLI interfaces
 - How to design a CLI for low-energy day use (minimal required flags)
 - Packaging a CLI tool so it works from anywhere in your terminal
 - How to add it to your dotfiles or daily context system
 
 **Session starter:**
-> "Help me build a simple CLI tool using Typer that wraps one of my AI workflows. I want it designed for low-energy day use — minimal flags, smart defaults. Show me how to package it so I can invoke it from anywhere in my terminal."
+> "Help me build a simple CLI tool using Typer that wraps one of my AI workflows. I want it designed for low-energy day use - minimal flags, smart defaults. Show me how to package it so I can invoke it from anywhere in my terminal."
 
 ---
 
-## Unit 5 — Cost Controls and Shutoff Logic
+## Unit 5 - Cost Controls and Shutoff Logic
 
 **Goal:** Make sure a stuck loop or bad input can never run up a large bill without warning.
 
@@ -85,7 +85,7 @@ You are a full-stack developer with deep Python expertise. This is not a beginne
 
 ---
 
-## Unit 6 — Testing AI Workflow Scripts
+## Unit 6 - Testing AI Workflow Scripts
 
 **Goal:** Write tests that catch breakage without requiring full API calls every time.
 
@@ -100,6 +100,29 @@ You are a full-stack developer with deep Python expertise. This is not a beginne
 
 ---
 
+## Unit 7 - Python Workflow Implementation Review Package
+
+**Goal:** Turn one workflow script into a reviewable Python implementation package with explicit loop control, schema rules, CLI design, cost guardrails, and tests.
+
+**Topics:**
+- Combining loop policy, concurrency choice, schema validation, CLI contract, budget logic, and tests into one reviewable packet
+- Checking that operator paths, code controls, and test coverage do not contradict each other
+- Writing a readiness decision for daily use, limited team use, redesign, or hold
+- Naming the change triggers that require a re-review later
+
+**Session starter:**
+> "Help me assemble a Python workflow implementation review package for one of my AI scripts. I want the loop policy, concurrency decision, schema contract, CLI design, cost controls, tests, and a final readiness decision in one coherent packet."
+
+---
+
 ## Practice Project
 
-Pick one existing Python script from your workflow library. Add retry logic, structured output validation, and at least three pytest tests with mocked API calls.
+Pick one existing Python script from your workflow library and turn it into a reviewable workflow implementation package that includes:
+
+- a loop failure policy and control module
+- a sync vs async decision with concurrency limits
+- a structured output schema and parser fallback path
+- an operator-friendly CLI contract and entrypoint
+- run budget and automatic shutoff logic
+- at least three pytest tests with mocked API calls
+- a final readiness decision for daily use, limited team use, redesign, or hold

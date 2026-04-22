@@ -1,94 +1,119 @@
 # Syllabus 12: Production AI Systems
-**Status:** Hidden Gap — What Separates Builders from Architects
+**Status:** Production Spine - Operating Controls Before Broader Deployment
 **Format:** One chat session per unit, self-paced
 
 ---
 
 ## What This Is
 
-Building an AI workflow is one skill. Running one safely in the real world is another. This syllabus covers the four things that protect you, your clients, and your wallet once a system is live.
+After API and data-engineering work, the next question is not "can this workflow run?" but "can this workflow be trusted in front of a client?" This syllabus is the first production-operations layer in the course path.
+
+It focuses on the controls that should exist before you worry about broader cloud topology, formal reliability programs, or distributed runtime complexity. The system can still be relatively simple. The operating discipline cannot.
 
 ---
 
-## Unit 1 — Cost Architecture and Hard Limits
+## Unit 1 - Cost Architecture and Hard Limits
 
-**Goal:** Design AI systems so a stuck loop or bad input cannot spend hundreds of dollars without warning.
+**Goal:** Put hard financial and operational boundaries around one live AI workflow.
 
 **Topics:**
-- How token costs accumulate in agentic loops
-- Setting hard token limits per run and per session
-- Automatic shutoff triggers for repeated errors or unexpected loop counts
-- Budget alerts before costs become a problem
-- Treating cost as a first-class design constraint, not an afterthought
+- How token, model, retrieval, and tool-call costs accumulate in production
+- Hard limits per request, per run, per tenant, and per time window
+- Automatic shutoff triggers for loops, repeated errors, and unexpected routing
+- Budget alerts and spend visibility before the bill becomes the incident
+- Treating cost as a production control, not just a finance concern
 
 **Session starter:**
-> "Help me design cost guardrails for an agentic AI workflow. I want hard token limits per run, automatic shutoffs for error loops, and budget alerting. Treat cost as a core design rule. Show me the patterns and the Python implementation."
+> "Help me design cost guardrails for a production AI workflow. I want hard limits per request and per run, shutoff logic for bad loops, budget alerts, and a policy I could actually operate for a client system."
 
 ---
 
-## Unit 2 — Live Monitoring and Observability
+## Unit 2 - Live Monitoring and Quiet Failure Detection
 
-**Goal:** Know when your deployed AI system is failing quietly — before your client notices.
+**Goal:** Detect the failures that do not look like obvious crashes.
 
 **Topics:**
-- What observability means for AI systems (watching real behavior, not just test behavior)
-- Tracking response latency over time
-- Detecting output quality drift (when answers get quietly worse)
-- Logging every API request with enough detail to reconstruct what happened
-- Alerting thresholds that notify you without overwhelming you
+- What quiet failure looks like in AI systems: plausible but wrong, slow, expensive, or silently degraded behavior
+- Minimum live monitoring for latency, failures, quality drift, queue health, and spend
+- Structured logging that supports incident reconstruction without leaking sensitive data
+- Thresholds and review signals for early degradation detection
+- Designing monitoring that supports the next modules instead of being replaced by them
 
 **Session starter:**
-> "Help me build a lightweight observability layer for a deployed AI workflow. I want latency tracking, output quality drift detection, and structured API request logging. What is the minimum I need to know when something is failing quietly?"
+> "Help me design live monitoring and quiet failure detection for an AI workflow. I want the minimum signals that tell me when outputs are drifting, latency is rising, or spend is getting weird before a client reports it."
 
 ---
 
-## Unit 3 — Active AI Security and Prompt Injection Defense
+## Unit 3 - Trust Boundaries and Prompt Injection Defense
 
-**Goal:** Build AI systems that treat every user input as a potential attack.
+**Goal:** Treat user input, retrieved content, and tool-facing context as different trust levels.
 
 **Topics:**
-- What prompt injection is — when a bad actor hides instructions inside user input to hijack the AI
-- How to separate system instructions from user input safely
-- Input filtering and validation before it reaches the model
-- Output filtering to catch cases where the model was successfully manipulated
-- Designing with the assumption that inputs will be adversarial
+- Why prompt injection is a trust-boundary problem, not just a prompt-writing problem
+- Separating system instructions, user input, retrieved documents, and tool outputs
+- Filtering, validation, and policy checks before the model or tools act on input
+- Output restrictions for unsafe tool calls, unsafe claims, or hidden instruction carryover
+- Designing for adversarial inputs without pretending the model can self-police perfectly
 
 **Session starter:**
-> "Teach me how to defend against prompt injection in AI workflows. How do I safely separate system instructions from user input? What input and output filters should I build? I want to design every workflow assuming inputs could be adversarial."
+> "Teach me trust boundaries and prompt injection defense for AI systems. I want to separate system instructions from user and retrieved content, control tool access, and stop unsafe behavior before it becomes a production incident."
 
 ---
 
-## Unit 4 — Human Handoff Systems
+## Unit 4 - Human Handoff Systems and Approval Queues
 
-**Goal:** Design AI workflows that know when to stop and ask a human for help.
+**Goal:** Design the points where the workflow must pause and ask for human judgment.
 
 **Topics:**
-- Identifying the decision points where an AI should never proceed alone
-- Building a pause-and-request-approval mechanism
-- How to design handoff prompts that are easy to review on a low-energy day
-- Logging the handoff reason so you can improve the system over time
-- Requiring human approval before any irreversible action
+- Identifying decisions the system should not complete alone
+- Building approval queues and pause states instead of informal side-channel review
+- Designing low-cognitive-load handoff packets for operators
+- Logging why the system escalated and what happened next
+- Using approval paths as governance, safety, and maintainability controls
 
 **Session starter:**
-> "Help me design a human handoff system for an AI workflow. I need the AI to pause and request approval before major or irreversible actions. The review interface must work on my worst brain fog days — minimal reading, clear choices. Show me the design pattern and a simple implementation."
+> "Help me design human handoff systems and approval queues for an AI workflow. I need clear pause rules, low-energy review packets, and a durable record of why the workflow stopped and who approved the next step."
 
 ---
 
-## Unit 5 — Putting It All Together — A Production Checklist
+## Unit 5 - Production Readiness Checklist
 
-**Goal:** Have a checklist you run through before any AI workflow goes live with a client.
+**Goal:** Turn the control decisions into a usable pre-launch review.
 
 **Topics:**
-- Pre-launch: cost limits set, logging configured, security filters in place
-- Launch: monitoring active, handoff points tested
-- Post-launch: weekly review of logs and cost reports
-- Incident response: what to do when something breaks in production
+- Pre-launch review of cost limits, monitoring, trust boundaries, and handoff rules
+- Launch-day checks for alerts, disable paths, and operator visibility
+- Weekly review habits for spend, failures, and escalation reasons
+- How to keep the checklist short enough to use during real release pressure
+- What should block launch versus what should be tracked as follow-up work
 
 **Session starter:**
-> "Help me build a production readiness checklist for AI workflow deployments. I want to cover cost controls, monitoring, security, and human handoffs. Make it a checklist I can run through quickly — designed for low-energy days."
+> "Help me build a production readiness checklist for an AI workflow. I want a short review that covers cost controls, quiet failure detection, prompt-injection defenses, human handoff, and launch blockers without becoming ceremony."
+
+---
+
+## Unit 6 - Production Operations Review Package
+
+**Goal:** Combine the control artifacts into one reviewer-ready operating package.
+
+**Topics:**
+- Assembling cost policy, failure-detection plan, trust boundaries, handoff design, and checklist into one packet
+- Checking internal consistency between controls and operating assumptions
+- Writing launch blockers, owners, and a final readiness decision
+- Naming the future changes that should force re-review
+
+**Session starter:**
+> "Help me assemble a production operations review package for one AI workflow. I want the cost controls, monitoring plan, trust-boundary rules, approval design, readiness checklist, and a final launch recommendation in one coherent packet."
 
 ---
 
 ## Practice Project
 
-Take one workflow you have already built. Run it through the production checklist from Unit 5. Identify which of the four safety layers is missing. Add the missing layer first.
+Take one AI API, retrieval workflow, or internal automation and turn it into a production operations package that includes:
+
+- a cost architecture and hard-limits policy
+- a quiet failure detection and monitoring plan
+- a trust-boundary and prompt-injection defense note
+- a human handoff and approval-queue design
+- a short production readiness checklist
+- a final launch recommendation with blockers and next steps

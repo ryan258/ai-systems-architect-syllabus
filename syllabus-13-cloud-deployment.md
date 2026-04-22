@@ -1,90 +1,119 @@
-# Syllabus 13: Cloud Infrastructure and Deployment
-**Status:** Enterprise Gap — The "Where" Your Workflows Live
+# Syllabus 13: Cloud Deployment
+**Status:** Production Spine - Moving the Workflow Off the Laptop
 **Format:** One chat session per unit, self-paced
 
 ---
 
 ## What This Is
 
-Your AI workflows currently run on your laptop. This syllabus teaches you how to deploy them to the cloud so they run 24/7, trigger automatically, and do not depend on your machine being on or your energy being available.
+Once a workflow has basic production controls, the next step is getting it off your machine and into a runtime you can actually depend on. This syllabus is about the first real cloud boundary in the course path.
+
+It focuses on packaging, runtime assumptions, triggers, low-maintenance operations, and launch verification. It is not yet about full repeatable delivery or distributed runtime complexity. Those come next.
 
 ---
 
-## Unit 1 — Why Cloud Deployment Matters for Architects
+## Unit 1 - What Changes When a Workflow Leaves Your Laptop
 
-**Goal:** Understand what changes when a workflow moves from your laptop to production.
+**Goal:** Understand the runtime boundary you are creating when local code becomes a service.
 
 **Topics:**
-- Why "it works on my machine" is not a deliverable
-- What 24/7 availability actually requires
-- The difference between a script and a deployed service
-- How cloud deployment connects to your constraint-driven philosophy — systems that run without you
+- Why "it works on my machine" is not a production argument
+- What changes when uptime, ingress, secrets, storage, and logs move into a cloud runtime
+- The difference between a local script, a service, and a triggered workload
+- What cloud deployment does and does not solve by itself
+- How this module builds directly on the controls from Syllabus 12
 
 **Session starter:**
-> "Explain what changes when an AI workflow moves from a local Python script to a cloud deployment. What does 24/7 availability actually require? Why is this the line between a prototype and a production system?"
+> "Explain what changes when an AI workflow leaves my laptop and becomes a cloud service. I want the real runtime boundary, not just the deployment steps: secrets, ingress, failure modes, state, and operator responsibility."
 
 ---
 
-## Unit 2 — Containers and Docker Basics
+## Unit 2 - Container Packaging and Docker Basics
 
-**Goal:** Understand what Docker is and how to put a Python AI workflow inside one.
+**Goal:** Package one workflow into a repeatable runtime unit.
 
 **Topics:**
-- What a container is — a portable box that holds your code and everything it needs to run
-- Writing a basic Dockerfile for a Python AI workflow
-- How containers eliminate "works on my machine" problems
-- Building and running your first container locally before deploying it
+- What a container is and why packaging matters for AI services
+- Writing a practical Dockerfile for a Python or FastAPI workflow
+- Port, entrypoint, dependency, and secret-injection assumptions
+- Building locally before trusting the cloud
+- Avoiding oversized or unclear build contexts
 
 **Session starter:**
-> "Teach me Docker from the perspective of an AI workflow architect. What is a container? How do I write a Dockerfile for a Python script that calls the Claude API? Walk me through building and running it locally first."
+> "Teach me container packaging and Docker basics for an AI workflow. I want to understand the runtime contract, write a clean Dockerfile, and verify locally before I trust a cloud deployment."
 
 ---
 
-## Unit 3 — Serverless Deployment
+## Unit 3 - Serverless Deployment and Webhook Triggers
 
-**Goal:** Deploy a containerized AI workflow to the cloud so it triggers automatically without a running server.
+**Goal:** Choose a low-maintenance cloud runtime and define how work gets into it.
 
 **Topics:**
-- What serverless means — code that runs only when triggered, costs nothing when idle
-- Google Cloud Run vs. AWS Lambda — when to use each
-- How webhooks trigger your workflow from external tools
-- Environment variables and secrets management in the cloud
+- What serverless does well for AI APIs and webhook-driven workloads
+- Cloud Run, Lambda, and similar patterns in plain language
+- Webhook verification, duplicate delivery, and trigger design
+- Environment variables, secrets, and runtime config in the cloud
+- When a simple serverless service is enough and when it is not
 
 **Session starter:**
-> "Help me deploy a Python AI workflow to Google Cloud Run or AWS Lambda. I want it to trigger via webhook. Explain serverless in plain terms first, then walk me through the deployment steps. Include how to handle API keys safely in the cloud."
+> "Help me design a serverless deployment and webhook trigger path for an AI workflow. I want the tradeoffs, not just the steps: runtime choice, webhook verification, duplicate handling, and secrets delivery."
 
 ---
 
-## Unit 4 — Making Deployments Low-Energy Friendly
+## Unit 4 - Low-Maintenance Cloud Operations
 
-**Goal:** Design cloud deployments that require minimal maintenance on bad days.
+**Goal:** Keep one cloud deployment operable without constant dashboard babysitting.
 
 **Topics:**
-- Infrastructure as code — defining your deployment in a file so you never click through dashboards
-- Auto-restart and health checks so the system recovers without you
-- Alerts that tell you something broke without requiring you to watch dashboards
-- Keeping deployments simple enough to understand when foggy
+- Health checks, restart behavior, and minimal operator signals
+- Low-energy operations patterns for one small service
+- Secret ownership, runtime responsibility, and safe disable paths
+- Cost, privacy, and observability considerations at the deployment boundary
+- Keeping the first cloud setup small enough to support well
 
 **Session starter:**
-> "Help me design a cloud deployment for an AI workflow that requires minimal ongoing maintenance. I want auto-restart, health checks, and alerts — but simple enough that I can understand what is happening on a bad MS day. What is the minimum viable cloud setup?"
+> "Help me design low-maintenance cloud operations for one AI service. I want health checks, restart behavior, operator signals, and a clear disable path without building an overcomplicated platform."
 
 ---
 
-## Unit 5 — Your First End-to-End Cloud Deployment
+## Unit 5 - Your First End-to-End Cloud Deployment
 
-**Goal:** Take one existing workflow from local script to live cloud deployment.
+**Goal:** Take one controlled workflow from local runtime to cloud runtime with launch evidence.
 
 **Topics:**
-- Choosing the right workflow to deploy first
-- The full path: Dockerfile → container build → cloud deploy → webhook test
-- Verifying it works without touching your laptop
-- Writing a one-page runbook (a plain-English document describing how to restart or fix it)
+- Choosing the first workflow that is actually suitable for deployment
+- The path from package to deploy to trigger to smoke test
+- Verifying that the service works without relying on your laptop
+- Writing a one-page operator runbook for restart, rollback, and first checks
+- Deciding what counts as "staging only" versus "ready for limited rollout"
 
 **Session starter:**
-> "Walk me through deploying one of my AI workflows end-to-end to the cloud. Start with Docker, move to Cloud Run or Lambda, set up a webhook trigger, and help me write a simple runbook so I can fix problems on a bad day without thinking too hard."
+> "Walk me through my first end-to-end cloud deployment for an AI workflow. I want packaging, deployment, trigger verification, smoke testing, and a simple operator runbook that I could use under pressure."
+
+---
+
+## Unit 6 - Cloud Deployment Review Package
+
+**Goal:** Combine the deployment artifacts into one reviewer-ready package.
+
+**Topics:**
+- Assembling deployment boundary, packaging, trigger design, health policy, and launch verification into one packet
+- Checking that runtime assumptions, rollback rules, and secret handling do not contradict each other
+- Writing rollout blockers and a final deployment decision
+- Naming the later changes that should force a deployment re-review
+
+**Session starter:**
+> "Help me assemble a cloud deployment review package for one AI workflow. I want the runtime boundary, packaging spec, trigger design, health policy, launch verification, and a final rollout recommendation in one coherent packet."
 
 ---
 
 ## Practice Project
 
-Pick one Python AI workflow you have already built. Write its Dockerfile. Deploy it to a free tier of Google Cloud Run or AWS Lambda. Trigger it with a test webhook. Write a one-page runbook.
+Take one workflow that already has the production controls from Syllabus 12 and turn it into a cloud deployment package that includes:
+
+- a deployment boundary brief
+- a container packaging specification
+- a serverless or webhook trigger decision
+- a low-maintenance operations runbook
+- a launch verification worksheet
+- a final cloud deployment recommendation with blockers and next steps

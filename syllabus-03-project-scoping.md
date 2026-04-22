@@ -82,6 +82,29 @@ Scoping means defining exactly what a project includes before you start. Without
 
 ---
 
+## Unit 6 — Final Scope Review Packet
+
+**Goal:** Review the project before commitment and decide whether to proceed, clarify, re-scope, or decline.
+
+**Topics:**
+- Combining discovery notes, scope, exclusions, assumptions, and revision rules into one packet
+- Checking that access, data, approval, timeline, and support expectations are explicit
+- Naming blockers before kickoff instead of after
+- Turning scope review into a repeatable pre-project habit
+
+**Session starter:**
+> "Help me assemble a final scope review packet for an AI project before I say yes. I want to combine discovery notes, scope, exclusions, assumptions, client responsibilities, and open questions into one reviewable decision packet."
+
+---
+
 ## Practice Project
 
-Write a scope document for a real or imagined project. Include: what you will deliver, what you will not deliver, timeline, and revision policy. Keep it under one page.
+Create a scope review packet for a real or imagined project. Include:
+
+- a discovery summary
+- a one-page scope document
+- exclusions
+- client responsibilities
+- timeline and revision rules
+- open questions
+- a final decision: proceed, clarify, re-scope, paid discovery, or decline
