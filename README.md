@@ -2,7 +2,7 @@
 
 This repo is a self-paced curriculum for becoming an AI systems architect: someone who can design, build, deploy, evaluate, secure, explain, and hand off AI systems that other people can depend on.
 
-The individual syllabi are not meant to be read as a flat list. They are a progression. Each phase should produce working artifacts, not just notes.
+The sequence is optional depth. Ryan may look up one lesson, save a note, or stop without completing a phase. Health and capacity come first; this curriculum supports personal reference and creative work. Existing professional examples remain examples, not a requirement to commercialize the work.
 
 ---
 
@@ -15,7 +15,7 @@ Treat a syllabus as complete only when you have produced something observable:
 - A short case study explaining the problem, decision, implementation, and result
 - A reusable template you can apply to future client work
 
-If a module does not create an artifact, it is only reading.
+Reading for a needed answer is a valid outcome; producing an artifact is optional practice.
 
 ---
 
@@ -28,7 +28,7 @@ Use this reusable prompt:
 ```text
 We're continuing my AI Systems Architect curriculum in:
 
-/Users/ryanjohnson/Projects/ai-systems-architect-syllabus
+/Users/ryanjohnson/Projects/cyborg/ai-systems-architect-syllabus
 
 Please continue the lesson development in the same style and quality bar as the previous completed modules.
 
