@@ -6,11 +6,11 @@ These standards define the quality bar for every lesson in this curriculum. The 
 
 ## Core Rule
 
-Every lesson must produce at least one artifact.
+Every lesson must offer a practice path that produces at least one artifact. Completing that practice is optional for a reader using the lesson as a reference.
 
 An artifact can be code, a diagram, an ADR, a runbook, an eval set, a threat model, a checklist, a policy note, a deployment, a case study, or a reusable template.
 
-If the learner cannot show what changed after the lesson, the lesson is incomplete.
+An authored lesson is incomplete if its practice path lacks a concrete output. A learner who found the needed answer may stop without completing that practice.
 
 ---
 
@@ -91,7 +91,7 @@ A lesson is ready when:
 
 ## Tone and Style
 
-Lessons should be clear, direct, and usable. Avoid hype. Avoid vague claims like "AI will transform everything." Prefer operational language:
+Follow `../my-ms-ai-blog/docs/VOICE-AND-STYLE.md`: warm, candid practitioner framing, plain language with selective names, and direct instruction voice for practice. Do not impose an umbrella brand or philosophy-first opening. Lessons should be clear, direct, and usable. Avoid hype. Avoid vague claims like "AI will transform everything." Prefer operational language:
 
 - "This system fails if..."
 - "Use this pattern when..."

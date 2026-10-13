@@ -53,9 +53,9 @@ Requirements:
   - Common Failure Modes
   - Portfolio Evidence
   - References
-- Every lesson must produce a concrete artifact.
+- Every lesson must offer practice that produces a concrete artifact; completing the practice remains optional for lookup readers.
 - Keep the curriculum practical, grounded, and artifact-driven.
-- Preserve the current style: direct, operational, no hype, no vague motivational content.
+- Follow the [canonical voice guide](../my-ms-ai-blog/docs/VOICE-AND-STYLE.md): warm, candid framing with plain language and direct practice instructions. Preserve specialist lesson structure without imposing brand vocabulary or a completion requirement on readers.
 - Weave in reliability, security, privacy, cost, observability, evaluation, governance, and maintainability where relevant.
 - Update lessons/README.md so the new lessons appear in the correct sequence.
 - Run consistency checks afterward: file presence, artifact lines, required headings, balanced code fences, ASCII cleanliness, and line counts.
